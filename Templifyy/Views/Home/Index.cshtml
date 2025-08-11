@@ -1,8 +1,171 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Главная";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="hero">
+    <div class="hero__bg">
+        <div class="hero__badge">
+            <span>🔥 Новинка</span>
+            <p>Платформа для создания и изучения курсов</p>
+        </div>
+    </div>
+    <h1>Изучайте новые навыки с <span class="highlight">экспертами</span></h1>
+    <p class="hero__desc">Откройте для себя тысячи курсов от ведущих специалистов в различных областях</p>
+    <div class="hero__search">
+        <input type="text" placeholder="Поиск курсов...">
+        <button><i class="ri-search-line"></i></button>
+    </div>
+</section>
+
+<section class="categories">
+    <div class="section-header">
+        <h2>Популярные категории</h2>
+        <a href="#" class="browse-all">Посмотреть все <i class="ri-arrow-right-line"></i></a>
+    </div>
+    <div class="categories__grid">
+        <div class="category-card">
+            <div class="category-card__icon">
+                <i class="ri-code-s-slash-line"></i>
+            </div>
+            <div class="category-card__title">Программирование</div>
+            <div class="category-card__desc">Изучайте языки программирования и разработку</div>
+            <div class="category-card__images">
+                <img src="~/templify/src/img/tem1.png" alt="Programming">
+                <img src="~/templify/src/img/tem2.png" alt="Programming">
+                <img src="~/templify/src/img/tem3.png" alt="Programming">
+            </div>
+        </div>
+        
+        <div class="category-card">
+            <div class="category-card__icon">
+                <i class="ri-palette-line"></i>
+            </div>
+            <div class="category-card__title">Дизайн</div>
+            <div class="category-card__desc">Создавайте красивые интерфейсы и графику</div>
+            <div class="category-card__images">
+                <img src="~/templify/src/img/tem4.png" alt="Design">
+                <img src="~/templify/src/img/tem5.png" alt="Design">
+                <img src="~/templify/src/img/tem6.png" alt="Design">
+            </div>
+        </div>
+        
+        <div class="category-card">
+            <div class="category-card__icon">
+                <i class="ri-bar-chart-line"></i>
+            </div>
+            <div class="category-card__title">Маркетинг</div>
+            <div class="category-card__desc">Изучайте стратегии продвижения и продаж</div>
+            <div class="category-card__images">
+                <img src="~/templify/src/img/tem7.png" alt="Marketing">
+                <img src="~/templify/src/img/tem8.png" alt="Marketing">
+                <img src="~/templify/src/img/tem9.png" alt="Marketing">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trending">
+    <div class="section-header">
+        <h2>Популярные курсы</h2>
+        <a href="#" class="browse-all">Посмотреть все <i class="ri-arrow-right-line"></i></a>
+    </div>
+    <div class="trending__grid">
+        <div class="product-card">
+            <div class="product-card__img">
+                <img src="~/templify/src/img/tem10.png" alt="Course">
+            </div>
+            <div class="product-card__price">$29.99</div>
+            <div class="product-card__meta">
+                <div class="product-card__author">
+                    <img src="~/templify/src/img/person1.jpg" alt="Author">
+                    <span>Иван Петров</span>
+                </div>
+                <div class="product-card__name">Основы веб-разработки</div>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-card__img">
+                <img src="~/templify/src/img/tem11.png" alt="Course">
+            </div>
+            <div class="product-card__price">$39.99</div>
+            <div class="product-card__meta">
+                <div class="product-card__author">
+                    <img src="~/templify/src/img/person2.jpg" alt="Author">
+                    <span>Мария Сидорова</span>
+                </div>
+                <div class="product-card__name">UI/UX дизайн с нуля</div>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-card__img">
+                <img src="~/templify/src/img/tem12.png" alt="Course">
+            </div>
+            <div class="product-card__price">$24.99</div>
+            <div class="product-card__meta">
+                <div class="product-card__author">
+                    <img src="~/templify/src/img/person3.jpg" alt="Author">
+                    <span>Алексей Козлов</span>
+                </div>
+                <div class="product-card__name">SMM для бизнеса</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="authors">
+    <div class="section-header">
+        <h2>Лучшие авторы</h2>
+        <a href="#" class="browse-all">Посмотреть всех <i class="ri-arrow-right-line"></i></a>
+    </div>
+    <div class="authors__grid">
+        <div class="author-card">
+            <div class="author-card__icon">
+                <img src="~/templify/src/img/person1.jpg" alt="Author">
+            </div>
+            <div class="author-card__info">
+                <div class="author-card__name">Иван Петров</div>
+                <div class="author-card__desc">Full-stack разработчик с 8-летним опытом</div>
+                <div class="author-card__stats">
+                    <span>15 курсов</span>
+                    <i class="ri-star-fill"></i>
+                    <span>4.9</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="author-card">
+            <div class="author-card__icon">
+                <img src="~/templify/src/img/person2.jpg" alt="Author">
+            </div>
+            <div class="author-card__info">
+                <div class="author-card__name">Мария Сидорова</div>
+                <div class="author-card__desc">UI/UX дизайнер и арт-директор</div>
+                <div class="author-card__stats">
+                    <span>12 курсов</span>
+                    <i class="ri-star-fill"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="author-card">
+            <div class="author-card__icon">
+                <img src="~/templify/src/img/person3.jpg" alt="Author">
+            </div>
+            <div class="author-card__info">
+                <div class="author-card__name">Алексей Козлов</div>
+                <div class="author-card__desc">Маркетолог и бизнес-тренер</div>
+                <div class="author-card__stats">
+                    <span>8 курсов</span>
+                    <i class="ri-star-fill"></i>
+                    <span>4.7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="~/templify/src/js/script.js"></script>

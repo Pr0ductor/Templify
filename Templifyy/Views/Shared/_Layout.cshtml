@@ -1,49 +1,120 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - Templifyy</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/Templifyy.styles.css" asp-append-version="true"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Templify</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/templify/src/css/styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Templifyy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
+    <div class="app-wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <a href="@Url.Action("Index", "Home")" style="display:flex;align-items:center;text-decoration:none;color:inherit;">
+                    <img src="~/templify/src/img/logo.png" alt="Templify Logo" class="logo-img" />
+                    <span class="header__logo-text">Templify</span>
+                </a>
             </div>
+            <button class="header__burger" aria-label="Открыть меню"><i class="ri-menu-line"></i></button>
+            <div class="header__actions">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="header__account-dropdown">
+                        <button class="header__account">@User.Identity.Name</button>
+                        <div class="header__account-menu">
+                            <form asp-controller="Auth" asp-action="Logout" method="post" style="margin: 0;">
+                                <button type="submit" class="header__account-menu-btn">Выйти</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="header__account-dropdown">
+                        <button class="header__account">Аккаунт</button>
+                        <div class="header__account-menu">
+                            <a href="@Url.Action("Login", "Auth")" class="header__account-menu-btn">Войти</a>
+                            <a href="@Url.Action("Register", "Auth")" class="header__account-menu-btn">Регистрация</a>
+                        </div>
+                    </div>
+                }
+                <button class="header__submit" onclick="window.location.href='#'">Создать курс</button>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="sidebar__popup-header sidebar__popup-only">
+                    <a href="@Url.Action("Index", "Home")" class="sidebar__logo-link">
+                        <img src="~/templify/src/img/logo.png" alt="Templify Logo" class="logo-img" />
+                        <span class="sidebar__logo-text">Templify</span>
+                    </a>
+                </div>
+                <div class="sidebar__popup-actions sidebar__popup-only">
+                    <button class="sidebar__submit" onclick="window.location.href='#'">Создать курс</button>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <div class="sidebar__account-dropdown">
+                            <button class="sidebar__account">@User.Identity.Name</button>
+                            <div class="sidebar__account-menu">
+                                <form asp-controller="Auth" asp-action="Logout" method="post" style="margin: 0;">
+                                    <button type="submit" class="header__account-menu-btn">Выйти</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="sidebar__account-dropdown">
+                            <button class="sidebar__account">Аккаунт</button>
+                            <div class="sidebar__account-menu">
+                                <a href="@Url.Action("Login", "Auth")" class="header__account-menu-btn">Войти</a>
+                                <a href="@Url.Action("Register", "Auth")" class="header__account-menu-btn">Регистрация</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <nav class="sidebar__nav">
+                    <ul>
+                        <li class="@(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")">
+                            <a href="@Url.Action("Index", "Home")"><i class="ri-home-5-line"></i> Главная</a>
+                        </li>
+                        <li><a href="#"><i class="ri-compass-3-line"></i> Курсы</a></li>
+                        <li><a href="#"><i class="ri-flashlight-line"></i> Новые курсы</a></li>
+                        <li><a href="#"><i class="ri-star-line"></i> Популярные курсы</a></li>
+                        <li><a href="#"><i class="ri-grid-line"></i> Категории</a></li>
+                        <li><a href="#"><i class="ri-user-3-line"></i> Авторы</a></li>
+                        <hr class="divider">
+                        <li><a href="#"><i class="ri-customer-service-2-line"></i> Поддержка</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <main class="content">
+                @RenderBody()
+            </main>
         </div>
-    </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - Templifyy - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        
+        <div class="overlay"></div>
+        
+        <footer class="footer">
+            <div class="footer__logo">
+                <img src="~/templify/src/img/logo.png" alt="Templify Logo" class="logo-img" />
+                Templify
+            </div>
+            <div class="footer__links">
+                <a href="#">Условия использования</a>
+                <a href="#">Политика конфиденциальности</a>
+                <span>© 2024 Templify - Все права защищены</span>
+            </div>
+        </footer>
     </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/templify/src/js/script.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

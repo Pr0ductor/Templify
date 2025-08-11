@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Доступ запрещен";
+}
+
+<section style="flex: 1; background: #181a1b; border-radius: 16px; padding: 40px 32px 32px 32px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 320px; max-width: 600px; margin: 0 auto; border: 2px solid #23272a;">
+    <div style="text-align: center;">
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #ff6b6b;">403</h1>
+        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 16px;">Доступ запрещен</h2>
+        <p style="font-size: 1.1rem; color: #ccc; margin-bottom: 32px;">У вас нет прав для доступа к этой странице</p>
+        <div style="height: 6px; width: 100%; background: linear-gradient(90deg, #ff6b6b 60%, transparent 100%); border-radius: 4px; margin-bottom: 32px;"></div>
+        <a href="@Url.Action("Index", "Home")" style="background: linear-gradient(90deg, #00ff88 60%, #00c97b 100%); color: #111; font-weight: 700; border: none; border-radius: 8px; padding: 14px 32px; font-size: 1.1rem; text-decoration: none; display: inline-block;">Вернуться на главную</a>
+    </div>
+</section>
