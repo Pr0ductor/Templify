@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templifyy", "Templifyy\Templifyy.csproj", "{E6A4ED16-D865-4DE4-9EF8-9DB6A34FE281}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C6DEC56D-E4CD-4B1F-94C3-A1CC36AEC508}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E2780018-1435-4B1A-8E5C-24FF5EEDD16D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.Domain", "Core\Templify.Domain\Templify.Domain.csproj", "{8FC591D8-BB00-45FD-843E-992F8C81D506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.Application", "Core\Templify.Application\Templify.Application.csproj", "{69177FA2-8A4E-4CA7-9B01-14E238A3015C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DEB6EE38-A0D5-4E63-A8BA-05AB33935ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.Infrastructure", "Infrastructure\Templify.Infrastructure\Templify.Infrastructure.csproj", "{9ED22A77-60DB-4517-9C96-E931FA2A436C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.Persistence", "Infrastructure\Templify.Persistence\Templify.Persistence.csproj", "{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{648E6819-F4DA-4944-8376-E0C6D2027370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templify.Shared", "Shared\Templify.Shared\Templify.Shared.csproj", "{F2ABCF73-87D6-4513-BCC6-91329C50BB6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6A4ED16-D865-4DE4-9EF8-9DB6A34FE281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A4ED16-D865-4DE4-9EF8-9DB6A34FE281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A4ED16-D865-4DE4-9EF8-9DB6A34FE281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A4ED16-D865-4DE4-9EF8-9DB6A34FE281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC591D8-BB00-45FD-843E-992F8C81D506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC591D8-BB00-45FD-843E-992F8C81D506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC591D8-BB00-45FD-843E-992F8C81D506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC591D8-BB00-45FD-843E-992F8C81D506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69177FA2-8A4E-4CA7-9B01-14E238A3015C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69177FA2-8A4E-4CA7-9B01-14E238A3015C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69177FA2-8A4E-4CA7-9B01-14E238A3015C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69177FA2-8A4E-4CA7-9B01-14E238A3015C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED22A77-60DB-4517-9C96-E931FA2A436C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED22A77-60DB-4517-9C96-E931FA2A436C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED22A77-60DB-4517-9C96-E931FA2A436C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED22A77-60DB-4517-9C96-E931FA2A436C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2ABCF73-87D6-4513-BCC6-91329C50BB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2ABCF73-87D6-4513-BCC6-91329C50BB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2ABCF73-87D6-4513-BCC6-91329C50BB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2ABCF73-87D6-4513-BCC6-91329C50BB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8FC591D8-BB00-45FD-843E-992F8C81D506} = {E2780018-1435-4B1A-8E5C-24FF5EEDD16D}
+		{69177FA2-8A4E-4CA7-9B01-14E238A3015C} = {E2780018-1435-4B1A-8E5C-24FF5EEDD16D}
+		{9ED22A77-60DB-4517-9C96-E931FA2A436C} = {DEB6EE38-A0D5-4E63-A8BA-05AB33935ACD}
+		{E7F73CD3-D6DC-43E4-AE7B-F4ECD8F788C7} = {DEB6EE38-A0D5-4E63-A8BA-05AB33935ACD}
+		{F2ABCF73-87D6-4513-BCC6-91329C50BB6F} = {648E6819-F4DA-4944-8376-E0C6D2027370}
+	EndGlobalSection
+EndGlobal

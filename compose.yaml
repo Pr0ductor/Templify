@@ -1,0 +1,6 @@
+﻿services:
+  templifyy:
+    image: templifyy
+    build:
+      context: .
+      dockerfile: Templifyy/Dockerfile
